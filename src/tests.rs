@@ -88,3 +88,31 @@ fn test_custom_structs() {
         ]
     )
 }
+
+#[test]
+fn random_order() {
+    let mut numbers = Vec::new();
+    for _ in 1..10000 {
+        numbers.push(rand::random::<i32>());
+    }
+
+    qsort::sort(numbers.as_mut_slice(), |low, high| low <= high);
+
+    for i in 0..numbers.len() - 1 {
+        assert!(numbers[i] <= numbers[i + 1]);
+    }
+}
+
+#[test]
+fn custom_order() {
+    let mut numbers = Vec::new();
+    for _ in 1..10000 {
+        numbers.push(rand::random::<i32>());
+    }
+
+    qsort::sort(numbers.as_mut_slice(), |low, high| low >= high);
+
+    for i in 0..numbers.len() - 1 {
+        assert!(numbers[i] >= numbers[i + 1]);
+    }
+}
