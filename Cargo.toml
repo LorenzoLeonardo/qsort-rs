@@ -1,0 +1,12 @@
+[package]
+name = "qsort-rs"
+authors = ["Lorenzo Leonardo <enzotechcomputersolutions@gmail.com>"]
+description = "A quick sort algorithm that accepts any type and non-recursive approach."
+license = "MIT"
+repository = "https://github.com/LorenzoLeonardo/qsort-rs"
+homepage = "https://github.com/LorenzoLeonardo/qsort-rs"
+documentation = "https://docs.rs/qsort-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
