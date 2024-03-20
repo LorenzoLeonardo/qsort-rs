@@ -1,3 +1,4 @@
+/// A quick sort function that accepts any type using non-recursive approach.
 pub fn sort<T: Ord>(array: &mut [T], compare: impl Fn(&T, &T) -> bool) {
     if array.len() < 2 {
         return;
